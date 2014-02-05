@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            html, body {
+                background: white;
+                color: #222;
+                font-size: 12pt;
+                font-family: serif;
+            }
+
+            h1, h2, h3, h4, h5 {
+                color: #444;
+            }
+        </style>
+
+        <script>
+            var i=0;
+
+            (function loop() {
+                setTimeout(function() {
+                    window.location.href = window.location.href.replace(/(\?.+)?$/, "?" + i);
+                    loop();
+                }, 1000);
+            }());
+        </script>
+    </head>
+
+    <body>
